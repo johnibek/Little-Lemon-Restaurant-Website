@@ -1,0 +1,7 @@
+# Pycharm files
+__pycache__/
+venv/
+.idea/
+
+# database
+*.sqlite3

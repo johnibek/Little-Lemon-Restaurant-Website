@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <style>
+        th, td{
+            border: 1px solid black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        thead{
+            background-color: #205067;
+            color: white;
+        }
+    </style>
+
+    <section>
+
+        <article>
+            <h1>Menu</h1>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dish</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+        
+                <tbody>
+                    {% for item in menu %}
+                        <tr>
+                            <td><a href="{% url 'menu_item' item.id %}">{{ item.name }}</a></td>
+                            <td>${{ item.price }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+        </article>        
+
+    </section>
+    
+{% endblock %}
