@@ -16,5 +16,8 @@
 		<i>Install Django and mysqlclient:</i><br>
 		<b>pip install django<br>
 		pip install mysqlclient</b>
+	</li><br>
+	<li>
+		<i>Update settings.py file. Add your database credentials</i>
 	</li>
 </ol>
